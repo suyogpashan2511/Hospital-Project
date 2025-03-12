@@ -1,0 +1,71 @@
+<div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let navLinks = document.querySelectorAll(".nav-link");
+      let currentLocation = window.location.pathname.split("/").pop();
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentLocation) {
+          link.classList.add("active", "fw-bold"); // Add Bootstrap active class and bold text
+          link.style.color = "#007bff"; // Change color for the active menu
+        }
+      });
+    });
+  </script>
+  <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img
+          src="assets/images/logo-h.jpg"
+          alt="blog image"
+          style="height: 30px"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul
+          class="navbar-nav ms-auto text-center d-flex justify-content-center"
+        >
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="doctor.html">Specialist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="department.html">Department</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="contact_us.html">Contact</a>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a
+              class="btn btn-primary text-white w-100 fw-bold"
+              href="Appointment.html"
+              >Appointment Now</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
